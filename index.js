@@ -3,7 +3,7 @@
 // var redbird = require('redbird')({port: 80});
 const redbird = require('redbird')({
     port: 80,
-    xfwd: false,
+    xfwd: true,
     letsencrypt: {
       path: __dirname + '/certs',
       port: 9999
