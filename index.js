@@ -8,9 +8,10 @@ const redbird = require('redbird')({
       path: __dirname + '/certs',
       port: 9999
     },
-    // ssl: {
-    //   http2: true,
-    // }
+    ssl: {
+        http2: true,
+        port: 443, // SSL port used to serve registered https routes with LetsEncrypt certificate.
+      }
   });
 
 // LetsEncrypt support
