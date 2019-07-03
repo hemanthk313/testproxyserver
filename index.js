@@ -1,9 +1,14 @@
-
-
-var redbird = require('redbird')({port: 80});
-
-
-
+var redbird = require('redbird')({
+    port: 80,
+    letsencrypt: {
+      path: __dirname + '/certs',
+      port: 9999
+    },
+    ssl: {
+      http2: true,
+      port: 443, // <----- this needs to be here
+    }
+  });
 redbird.register('engagejet.ml', 'http://127.0.0.1:3000', {
     ssl: {
         letsencrypt: {
