@@ -5,7 +5,6 @@ var redbird = require('redbird')({
       port: 9999
     },
     ssl: {
-      http2: true,
       port: 443, // <----- this needs to be here
     }
   });
