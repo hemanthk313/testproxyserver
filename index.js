@@ -1,7 +1,7 @@
 const Queue = require('bull');
 
 const redbird = require('redbird')({
-    port: 80,
+    port: 8080,
     letsencrypt: {
         path: __dirname + '/certs',
         port: 9999
